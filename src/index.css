@@ -1,5 +1,6 @@
-body {
-  background-color: #5d6d88;
+body
+{
+    background-color: #5d6d88;
     background-image: url("/public/bg_image.jpg");
     background-repeat: "no-repeat";
     background-attachment: "fixed";
@@ -8,7 +9,16 @@ body {
     height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
 }

@@ -12,7 +12,7 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import LoadingButton from "@mui/lab/LoadingButton";
 import { Link, useHistory } from "react-router-dom";
 import Alert from "@mui/material/Alert";
-import NewTextField from "./NewTextField";
+import Input from "./Input";
 import { signup } from "../Api/index";
 
 import useStyles from "./styles";
@@ -130,7 +130,7 @@ const Auth = () => {
           <Typography variant="h5">Sign Up</Typography>
           <form className={classes.form} onSubmit={handleSubmit}>
             <Grid container spacing={2}>
-              <NewTextField
+              <Input
                 name="name"
                 label="Name"
                 type="text"
@@ -139,7 +139,7 @@ const Auth = () => {
                 required
                 value={formData.name}
               />
-              <NewTextField
+              <Input
                 name="email"
                 label="Email Address"
                 type="email"
@@ -147,7 +147,7 @@ const Auth = () => {
                 required
                 value={formData.email}
               />
-              <NewTextField
+              <Input
                 name="username"
                 label="UserName"
                 type="text"
@@ -156,7 +156,7 @@ const Auth = () => {
                 error={userlen}
                 value={formData.username}
               />
-              <NewTextField
+              <Input
                 name="password"
                 label="Password"
                 type={showPassword ? "text" : "password"}
@@ -166,7 +166,7 @@ const Auth = () => {
                 error={passlen}
                 value={formData.password}
               />
-              <NewTextField
+              <Input
                 name="confirmPassword"
                 label="Confirm Password"
                 type={showPassword ? "text" : "password"}

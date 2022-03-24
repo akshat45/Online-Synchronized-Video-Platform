@@ -1,35 +1,38 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy } from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Loader from "./Components/Loader";
+import Loader from './Components/Loader';
 import "./App.css";
 
-const LoginPage = lazy(() => import("./Components/Login"));
-const SignupPage = lazy(() => import("./Components/Signup"));
+const Login = lazy(() => import("./Components/Login"));
+const Signup = lazy(() => import("./Components/Signup"));
+// const Room = lazy(() => import("./Components/Mainpage/Mainpage"));
 const Home = lazy(() => import("./Components/Home"));
+
+const Changepassword = lazy(() => import("./Components/Changepassword"));
 
 function App() {
   return (
     <BrowserRouter>
-      <Suspense
-        fallback={
-          <div className="App">
-            <Loader margin />
-          </div>
-        }
-      >
-        <div className="App">
-          <Switch>
-            <Route path="/" exact>
-              <Home />
-            </Route>
-            <Route path="/login" exact>
-              <LoginPage />
-            </Route>
-            <Route path="/signup" exact>
-              <SignupPage />
-            </Route>
-          </Switch>
-        </div>
+     <Suspense fallback={<div className='App'><Loader margin/></div>}>
+      <div className="App">
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/login" exact>
+            <Login />
+          </Route>
+          <Route path="/signup" exact>
+            <Signup />
+          </Route>
+          <Route path="/changepassword" exact>
+            <Changepassword/>
+          </Route>
+          {/* <Route path="/room/:roomId">
+            <Room />
+          </Route> */}
+        </Switch>
+      </div>
       </Suspense>
     </BrowserRouter>
   );
