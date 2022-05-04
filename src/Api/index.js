@@ -83,7 +83,14 @@ export const delRoom = (roomId) =>
             return err.response.data;
         });
 
-
+export const ytSearch = (term) =>
+    API.post(`/videoSearch`, term)
+        .then((res) => {
+            return res.data;
+        })
+        .catch((err) => {
+            return err.response.data;
+        });
 
 export const myRoom = () =>
     API.get("/user/myRoom")

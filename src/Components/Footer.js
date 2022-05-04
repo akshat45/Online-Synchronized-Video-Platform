@@ -9,10 +9,9 @@ const Footer = () => {
         <div
           style={{ position:"fixed",width:"100%",bottom:"1px" ,padding: "5px", backgroundColor: "rgba(110, 143, 200,1)", display: 'flex', color: "white", justifyContent: 'center', alignItems: 'center' }}
         >
-          &copy; 2022 WatchTube | All Rights Reserved | Terms of Service |
-          Privacy | Developers &nbsp;
+          &copy; 2022 WatchTube | All Rights Reserved | <a href="/toc">Terms of Service </a>| <a href="/privacy">Privacy Policy</a>
+        &nbsp;
           
-          &nbsp;
         </div>
     </div>
   );

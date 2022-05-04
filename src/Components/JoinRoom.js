@@ -29,10 +29,11 @@ function JoinRoom() {
         sx={{width:"100%"}}
       >
         <Typography variant="h5" component="div" sx={{ textAlign: "center" }}>
-        {loading?"Loading":"Open rooms"}
+        {loading?"Loading":"Public rooms"}
       </Typography>
       </LoadingButton>
-        
+      
+        <p style={{fontSize:"10px",margin:"10px"}}> By Clicking on JOIN button, you are accepting the <a href="/toc">terms of service</a> and <a href="/privacy">Privacy Policy</a> of the website</p>
       <div
         style={{
           "max-height": "80vh",

@@ -85,11 +85,11 @@ const Navbar = () => {
     return (
         <nav style={temp}>
             <Link className='textselectno logo' to="/">
-                <img
+                {/* <img
                     src="favicon.ico"
                     alt="Watch Tube"
                     style={{ height: "20px", marginRight: "3px" }}
-                />
+                /> */}
                 <span style={{ color: "#0d6efd" }}>Watch</span><span style={{ color: "#9CC3D5" }}>Tube</span>
             </Link>
             <div className='menuicon'>

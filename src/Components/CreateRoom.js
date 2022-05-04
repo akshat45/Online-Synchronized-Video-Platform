@@ -16,6 +16,7 @@ import Input from "./Input";
 import { CreateNewRoom } from "../Api/index";
 
 import useStyles from "./styles";
+import { fontSize } from "@mui/system";
 
 const CreateRoom = () => {
   const classes = useStyles();
@@ -138,6 +139,7 @@ const CreateRoom = () => {
               );
             })} */}
           </Grid>
+          <p style={{fontSize:"12px"}}> By Clicking on CREATE button, you are accepting the <a href="/toc">terms of service</a> and <a href="/privacy">Privacy Policy</a> of the website</p>
           <Box marginTop={2}>
             <LoadingButton
               type="submit"
